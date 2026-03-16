@@ -34,7 +34,7 @@ int main(){
     // cout <<"Your fav colour is " << setw(5) << colour << endl << endl;
 
     // cout << "Your age is " << setw(10) << fixed << setprecision(2) << age << endl;
-    // cout <<"Your fav colour is " << setw(5) << colour << endl << endl;
+    // cout <<"Your fav colour is " << setw(5) << colour << endl;
 
     // square(age);
     // cout << "Your age is " << setw(10) << fixed << setprecision(2) << age << endl;
