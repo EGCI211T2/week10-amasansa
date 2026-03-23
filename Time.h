@@ -1,22 +1,30 @@
-struct Time{
-	int m,h,s;
+class Time{
+	private:
+		int m,h,s;
+	public:
+		void set_time(int,int,int);
+		void getTime();
+		void display();
+		Time subtract(Time);
 };
 
-//create 3 functions
-
-//1.  getTime function
-//2. subtract fuctions
-//3. display functions
-
-void getTime(Time &t)
-{
-	cin >>t.h >>t.m >>t.s;
+void Time::set_time(int a=0,int b=0,int c=0){
+	h=(a>=0&&a<24)?a:0;
+	m=(b>=0&&b<60)?b:0;
+	s=(c>=0&&c<60)?c:0;
 }
 
-Time subtract(Time t2,Time t1)
+void Time::getTime()
+{
+	cout << "input time : ";
+	cin >>h >>m >>s;
+}
+
+Time Time::subtract(Time t1)
 {
 	int sec1=(t1.h*3600)+(t1.m*60)+t1.s;
-	int sec2=(t2.h*3600)+(t2.m*60)+t2.s;
+	int sec2=(this->h*3600)+(this->m*60)+this->s;
+	// int sec2=(t2.h*3600)+(t2.m*60)+t2.s;
 	int diff=sec2-sec1;
 
 	if(diff<0)
@@ -33,7 +41,7 @@ Time subtract(Time t2,Time t1)
 	return t3;
 }
 
-void display(Time t3)
+void Time::display()
 {
-	cout <<setfill('0') <<setw(2) <<t3.h <<":" <<setfill('0') <<setw(2) <<t3.m <<":" <<setfill('0') <<setw(2) <<t3.s <<endl;
+	cout <<setfill('0') <<setw(2) <<h <<":" <<setfill('0') <<setw(2) <<m <<":" <<setfill('0') <<setw(2) <<s <<endl;
 }

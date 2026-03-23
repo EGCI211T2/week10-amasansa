@@ -2,41 +2,16 @@
 #include <iomanip>
 
 using namespace std;
-
 #include "Time.h"
-// void square(float&);
-// void square(float &x)
-// {
-//     x*=x;
-// }
-
 int main(){
-    struct Time t1,t2,t3;
-    // cout<<"What time was it?";
-    cout << "t1 ";
-    getTime(t1);
-    // cout<<"What time is it now?";
-    cout << "t2 ";
-    getTime(t2);
-    t3=subtract(t2,t1); //t3=t2-t1
-    // cout<<"Time diff is ";
-    cout << "t3 ";
-    display(t3);
-
-    // float age;
-    // string colour;
-    // cout << "How old are you? and What your fav colour?" << endl;
-    // cin >> age >> colour;
-    // cout << "Your age is " << setw(10) << age << endl;
-    // cout <<"Your fav colour is " << setw(5) << colour << endl << endl;
-
-    // cout << "Your age is " << setfill(' ') << setw(10) << age << endl;
-    // cout <<"Your fav colour is " << setw(5) << colour << endl << endl;
-
-    // cout << "Your age is " << setw(10) << fixed << setprecision(2) << age << endl;
-    // cout <<"Your fav colour is " << setw(5) << colour << endl;
-
-    // square(age);
-    // cout << "Your age is " << setw(10) << fixed << setprecision(2) << age << endl;
-    // cout <<"Your fav colour is " << setw(5) << colour << endl;
+    Time t1,t2,t3;
+    t1.getTime();
+    // t1.set_time(5,6,7);
+    t2.getTime();
+    // t2.set_time(6,7,8);
+    t1.display();
+    t2.display();
+    
+    t3=t2.subtract(t1);
+    t3.display();
 }
