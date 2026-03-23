@@ -18,6 +18,7 @@ void Time::getTime()
 {
 	cout << "input time : ";
 	cin >>h >>m >>s;
+	set_time(h,m,s);
 }
 
 Time Time::subtract(Time t1)
